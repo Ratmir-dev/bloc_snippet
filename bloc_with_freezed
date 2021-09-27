@@ -1,0 +1,60 @@
+"Create BlocFreezed":{
+		"scope": "dart",
+		"prefix": "blocFreezed",
+		"body": [
+			"import 'package:bloc/bloc.dart';",
+			"import 'package:freezed_annotation/freezed_annotation.dart';\n",
+			"part '$fileNameWithoutExtension$.freezed.dart';",
+			"\n",
+			"@freezed",
+			"abstract class $NAME$Event with _$$$NAME$Event {",
+			"\tconst $NAME$Event._();",
+
+			"\tconst factory $NAME$Event.create() = Create$NAME$Event;",
+
+			"\tconst factory $NAME$Event.read() = Read$NAME$Event;",
+
+			"\tconst factory $NAME$Event.update() = Update$NAME$Event;",
+
+			"\tconst factory $NAME$Event.delete() = Delete$NAME$Event;",
+			"}\n",
+
+			"@freezed",
+			"abstract class $NAME$State with _$$$NAME$State {",
+			"\tconst $NAME$State._();",
+			
+			"\tconst factory $NAME$State.initial() = Initial$NAME$State;",
+			"}\n",
+
+			"class $NAME$BLoC extends Bloc<$NAME$Event, $NAME$State> {",
+			"\t$NAME$BLoC() : super(const Initial$NAME$State());\n",
+
+			"\t@override",
+			"\tStream<$NAME$State> mapEventToState($NAME$Event event) =>",
+				"\t\tevent.when<Stream<$NAME$State>>(",
+				"\t\tcreate: _create,",
+				"\t\tread: _read,",
+				"\t\tupdate: _update,",
+				"\t\tdelete: _delete,",
+				"\t);\n",
+			
+			"\tStream<$NAME$State> _create() async* {",
+				"\t\t// ...",
+			"\t}\n",
+
+			"\tStream<$NAME$State> _read() async* {",
+				"\t\t// ...",
+			"\t}\n",
+
+			"\tStream<$NAME$State> _update() async* {",
+				"\t\t// ...",
+			"\t}\n",
+
+			"\tStream<$NAME$State> _delete() async* {",
+				"\t\t// ...",
+			"\t}\n",
+		"}"
+		],
+		"description": "Create CRUD BLoC with freezed"
+
+	}
