@@ -7,7 +7,7 @@
 			"part '$fileNameWithoutExtension$.freezed.dart';",
 			"\n",
 			"@freezed",
-			"abstract class $NAME$Event with _$$$NAME$Event {",
+			"abstract class $NAME$Event with _$$NAME$Event {",
 			"\tconst $NAME$Event._();",
 
 			"\tconst factory $NAME$Event.create() = Create$NAME$Event;",
@@ -20,7 +20,7 @@
 			"}\n",
 
 			"@freezed",
-			"abstract class $NAME$State with _$$$NAME$State {",
+			"abstract class $NAME$State with _$$NAME$State {",
 			"\tconst $NAME$State._();",
 			
 			"\tconst factory $NAME$State.initial() = Initial$NAME$State;",
