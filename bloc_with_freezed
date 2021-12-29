@@ -26,7 +26,7 @@
 			"\tconst factory $NAME$State.initial() = Initial$NAME$State;",
 			"}\n",
 
-			"class $NAME$BLoC extends Bloc<$NAME$Event, $NAME$State> {",
+			"class $NAME$Bloc extends Bloc<$NAME$Event, $NAME$State> {",
 			"\t$NAME$BLoC() : super(const Initial$NAME$State());\n",
 
 			"\t@override",
